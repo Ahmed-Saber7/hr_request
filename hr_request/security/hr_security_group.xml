@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--    IT-->
+    <record model="ir.module.category" id="module_category_it_dept">
+        <field name="name">Technical Department</field>
+        <field name="sequence">11</field>
+    </record>
+    <record id="group_it_employee" model="res.groups">
+        <field name="name">IT Employee</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        <field name="category_id" ref="module_category_it_dept"/>
+    </record>
+
+    <record id="group_it_head_office" model="res.groups">
+        <field name="name">Head Office</field>
+        <field name="implied_ids" eval="[(4, ref('hr_request.group_it_employee'))]"/>
+        <field name="category_id" ref="module_category_it_dept"/>
+    </record>
+
+    <record id="group_it_dept_manager" model="res.groups">
+        <field name="name">Department Manager</field>
+        <field name="implied_ids" eval="[(4, ref('hr_request.group_it_head_office'))]"/>
+        <field name="category_id" ref="module_category_it_dept"/>
+    </record>
+
+    <!--    General Secretariat Group-->
+
+    <record model="ir.module.category" id="module_category_general_secretariat">
+        <field name="name">General Secretariat</field>
+        <field name="sequence">14</field>
+    </record>
+
+    <record id="group_administrative_manager" model="res.groups">
+        <field name="name">Administrative Manager</field>
+        <field name="category_id" ref="module_category_general_secretariat"/>
+    </record>
+
+    <record id="group_general_secretary_manager" model="res.groups">
+        <field name="name">General Secretary</field>
+        <field name="category_id" ref="module_category_general_secretariat"/>
+    </record>
+
+    <record id="group_assistant_secretary_manager" model="res.groups">
+        <field name="name">Assistant Secretary General</field>
+        <field name="category_id" ref="module_category_general_secretariat"/>
+    </record>
+
+</odoo>

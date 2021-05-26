@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!--creating sequence for Disclaimer Request-->
+        <record model="ir.sequence" id="disclaimer_request_sequence">
+            <field name="name">Disclaimer Request Sequence</field>
+            <field name="code">disclaimer.request</field>
+            <field name="padding">4</field>
+            <field eval="1" name="number_increment"/>
+            <field name="model" eval="'disclaimer.request'"/>
+            <field name="prefix">DR</field>
+            <field name="auto_reset">True</field>
+            <field name="reset_period">month</field>
+            <field name="reset_init_number">1</field>
+        </record>
+
+        <!--creating sequence for Late Permission-->
+        <record model="ir.sequence" id="late_permission_sequence">
+            <field name="name">Late Permission Sequence</field>
+            <field name="code">late.permission</field>
+            <field name="padding">4</field>
+            <field eval="1" name="number_increment"/>
+            <field name="model" eval="'late.permission'"/>
+            <field name="prefix">LP</field>
+            <field name="auto_reset">True</field>
+            <field name="reset_period">month</field>
+            <field name="reset_init_number">1</field>
+        </record>
+
+    </data>
+</odoo>

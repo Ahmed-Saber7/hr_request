@@ -1,0 +1,106 @@
+<odoo>
+    <data>
+        <!--form of the Late Permission menu-->
+        <record id="late_permission_form" model="ir.ui.view">
+            <field name="name">late.permission.form</field>
+            <field name="model">late.permission</field>
+            <field name="arch" type="xml">
+                <form string="Late Permission">
+                    <header>
+                        <button name="employee_confirm" type="object" string="Send" states="draft"
+                                class="oe_highlight" attrs="{'invisible': [('state', '!=', ['draft'])]}"/>
+
+                        <button name="direct_manager_confirm" type="object" string="Approve" states="direct_manager"
+                                class="oe_highlight" attrs="{'invisible': [('state', '!=', ['direct_manager'])]}"/>
+
+
+                        <button name="hr_manager_confirm" type="object" string="Approve" states="hr_manager"
+
+                                class="oe_highlight" attrs="{'invisible': [('state', '!=', ['hr_manager'])]}"/>
+
+                        <button name="reject" type="object" string="Reject"
+                                class="oe_highlight"
+                                attrs="{'invisible': [('state', 'in', ['draft','approved','rejected'])]}"/>
+
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_edit_only">
+                            <label for="name" class="oe_inline"/>
+                        </div>
+                        <h1>
+                            <field name="name" class="oe_inline"/>
+                        </h1>
+                        <group>
+                            <group>
+                                <field name="employee_id"/>
+                                <field name="type"/>
+                                <field name="description"/>
+                            </group>
+                            <group>
+                                <field name="date"/>
+                                <br></br>
+                                <field name="permission_time"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+
+                </form>
+            </field>
+        </record>
+
+        <!--tree of the Late Permission menu-->
+        <record id="late_permission_tree" model="ir.ui.view">
+            <field name="name">late.permission.tree</field>
+            <field name="model">late.permission</field>
+            <field name="arch" type="xml">
+                <tree string="Late Permission" default_order='create_date desc'
+                      decoration-danger="state == 'rejected'"
+                      decoration-success="state == 'approved'"
+                      decoration-info="state == 'draft'">
+                    <field name="name"/>
+                    <field name="employee_id"/>
+                    <field name="type"/>
+                    <field name="date"/>
+                    <field name="permission_time"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--action of the Late Permission menu-->
+        <record id="action_late_permission" model="ir.actions.act_window">
+            <field name="name">Late Permission</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">late.permission</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create your Late Permission !
+                </p>
+            </field>
+
+        </record>
+
+        <!--creating menus-->
+
+        <!--HR menu-->
+        <menuitem id="hr_root_menu" name="HR" sequence="1" web_icon="hr_request,static/description/icon.png"/>
+        <!--Personal Request menu-->
+        <menuitem id="hr_request_personal_menu" name="Personal Request" parent="hr_root_menu" sequence="1"/>
+        <!--Administrative Request menu-->
+        <menuitem id="hr_request_administrative_menu" name="Administrative Request" parent="hr_root_menu" sequence="2"
+                  groups="hr.group_hr_user"/>
+
+        <!--Late Permission menu-->
+        <menuitem id="late_permission_menu" name="Late Permission" parent="hr_request_personal_menu"
+                  action="action_late_permission" sequence="1"/>
+
+
+    </data>
+</odoo>

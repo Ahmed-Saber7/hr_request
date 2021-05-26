@@ -1,0 +1,580 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* hr_request
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-06 10:22+0000\n"
+"PO-Revision-Date: 2020-12-06 10:22+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_request
+#: model:mail.template,body_html:hr_request.mail_template_disclaimer_request
+#: model:mail.template,body_html:hr_request.mail_template_late_permission
+msgid "\n"
+"                \n"
+"            <div style=\"margin: 10px auto;direction:rtl;\">\n"
+"            <div>\n"
+"            </div>\n"
+"                <p> احمد صابر السيد محمود</p>\n"
+"            </div>\n"
+"            \n"
+"            "
+msgstr ""
+
+#. module: hr_request
+#: model:mail.template,body_html:hr_request.mail_template_ending_contract_notify
+#: model:mail.template,body_html:hr_request.mail_template_trail_ending_contract_notify
+msgid "\n"
+"                \n"
+"            <div style=\"margin: 10px auto;direction:rtl;\">\n"
+"            <div>\n"
+"            </div>\n"
+"            <p> MR/ ${object.employee_id.d_manager.name} </p>\n"
+"            <p>\n"
+"            Please renew contract for employee <a href=\"${object.employee_id.name}\"/>\n"
+"            <a href=\"${object.link}\">From Here</a>\n"
+"            </p>\n"
+"            </div>\n"
+"            \n"
+"            "
+msgstr ""
+
+#. module: hr_request
+#: selection:disclaimer.request,state:0
+msgid "ADMINISTRATIVE MANAGER"
+msgstr "المدير الإداري"
+
+#. module: hr_request
+#: selection:disclaimer.request,state:0
+#: selection:late.permission,state:0
+msgid "APPROVED"
+msgstr "قبول"
+
+#. module: hr_request
+#: model:ir.model.fields,field_description:hr_request.field_disclaimer_request__message_needaction
+#: model:ir.model.fields,field_description:hr_request.field_late_permission__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: hr_request
+#: model:res.groups,name:hr_request.group_administrative_manager
+msgid "Administrative Manager"
+msgstr "المدير الإداري"
+
+#. module: hr_request
+#: model:ir.ui.menu,name:hr_request.hr_request_administrative_menu
+msgid "Administrative Request"
+msgstr "طلبات إدارية"
+
+#. module: hr_request
+#: model_terms:ir.ui.view,arch_db:hr_request.disclaimer_request_form
+#: model_terms:ir.ui.view,arch_db:hr_request.late_permission_form
+msgid "Approve"
+msgstr "قبول"
+
+#. module: hr_request
+#: model:res.groups,name:hr_request.group_assistant_secretary_manager
+msgid "Assistant Secretary General"
+msgstr "مساعد أمين عام"
+
+#. module: hr_request
+#: model:ir.model.fields,field_description:hr_request.field_disclaimer_request__message_attachment_count
+#: model:ir.model.fields,field_description:hr_request.field_late_permission__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: hr_request
+#: model:ir.model,name:hr_request.model_res_config_settings
+msgid "Config Settings"
+msgstr "ضبط الإعدادات"
+
+#. module: hr_request
+#: model:ir.ui.menu,name:hr_request.hr_request_configuration_menu
+msgid "Configuration"
+msgstr "الإعدادات"
+
+#. module: hr_request
+#: model:ir.model,name:hr_request.model_hr_contract
+msgid "Contract"
+msgstr "العقد"
+
+#. module: hr_request
+#: model_terms:ir.ui.view,arch_db:hr_request.res_config_settings_view_form
+msgid "Contract Newly Notify Email Settings"
+msgstr "إشعارات الإيميلات لتجديد العقد"
+
+#. module: hr_request
+#: model:ir.actions.server,name:hr_request.contract_ending_cron_ir_actions_server
+#: model:ir.cron,cron_name:hr_request.contract_ending_cron
+#: model:ir.cron,name:hr_request.contract_ending_cron
+msgid "Contract: contract ending cron"
+msgstr "العقد: العقد المنتهي كرون"
+
+#. module: hr_request
+#: model_terms:ir.actions.act_window,help:hr_request.action_disclaimer_request
+msgid "Create your Disclaimer Request !"
+msgstr "قم بأنشاء طلب إخلاء طرف"
+
+#. module: hr_request
+#: model_terms:ir.actions.act_window,help:hr_request.action_late_permission
+msgid "Create your Late Permission !"
+msgstr "قم بأنشاء طلب إستئذان"
+
+#. module: hr_request
+#: model:ir.model.fields,field_description:hr_request.field_disclaimer_request__create_uid
+#: model:ir.model.fields,field_description:hr_request.field_late_permission__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: hr_request
+#: model:ir.model.fields,field_description:hr_request.field_disclaimer_request__create_date
+#: model:ir.model.fields,field_description:hr_request.field_late_permission__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: hr_request
+#: selection:disclaimer.request,state:0
+msgid "DEPARTMENT MANAGER"
+msgstr "رئيس القسم"
+
+#. module: hr_request
+#: selection:disclaimer.request,state:0
+#: selection:late.permission,state:0
+msgid "DIRECT MANAGER"
+msgstr "الرئيس المباشر"
+
+#. module: hr_request
+#: selection:late.permission,state:0
+msgid "DRAFT"
+msgstr "مسودة"
+
+#. module: hr_request
+#: model:ir.model.fields,field_description:hr_request.field_disclaimer_request__date
+#: model:ir.model.fields,field_description:hr_request.field_late_permission__date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: hr_request
+#: model:ir.model.fields,field_description:hr_request.field_res_config_settings__max_of_early_late_permission
+msgid "Default Maximum Of Early Sign out"
+msgstr "أقصي عدد للخروج مبكر في الشهر"
+
+#. module: hr_request
+#: model_terms:ir.ui.view,arch_db:hr_request.res_config_settings_view_form
+msgid "Default Maximum Of Early Sign out Permission"
+msgstr "الحد الأقصى الافتراضي لإذن الخروج المبكر"
+
+#. module: hr_request
+#: model:ir.model.fields,field_description:hr_request.field_res_config_settings__max_of_early_late_permission_time
+#: model_terms:ir.ui.view,arch_db:hr_request.res_config_settings_view_form
+msgid "Default Maximum Of Early Sign out Time"
+msgstr "الحد الأقصى الافتراضي لوقت تسجيل الخروج المبكر"
+
+#. module: hr_request
+#: model:res.groups,name:hr_request.group_it_dept_manager
+msgid "Department Manager"
+msgstr "رئيس القسم"
+
+#. module: hr_request
+#: model:ir.model.fields,field_description:hr_request.field_disclaimer_request__description
+#: model:ir.model.fields,field_description:hr_request.field_late_permission__description
+msgid "Description"
+msgstr "السبب"
+
+#. module: hr_request
+#: model:ir.model.fields,field_description:hr_request.field_disclaimer_request__department_manager
+#: model:ir.model.fields,field_description:hr_request.field_disclaimer_request__direct_manager
+#: model:ir.model.fields,field_description:hr_request.field_late_permission__direct_manager
+msgid "Direct Manager"
+msgstr "الرئيس المباشر"
+
+#. module: hr_request
+#: model:ir.actions.act_window,name:hr_request.action_disclaimer_request
+#: model:ir.ui.menu,name:hr_request.disclaimer_request_menu
+#: model_terms:ir.ui.view,arch_db:hr_request.disclaimer_request_form
+#: model_terms:ir.ui.view,arch_db:hr_request.disclaimer_request_tree
+msgid "Disclaimer Request"
+msgstr "طلب إخلاء طرف"
+
+#. module: hr_request
+#: model:ir.model.fields,field_description:hr_request.field_disclaimer_request__display_name
+#: model:ir.model.fields,field_description:hr_request.field_late_permission__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: hr_request
+#: selection:late.permission,type:0
+msgid "Early Sign out"
+msgstr "تسجيل الخروج مبكرًا"
+
+#. module: hr_request
+#: model:ir.model.fields,field_description:hr_request.field_disclaimer_request__employee_id
+#: model:ir.model.fields,field_description:hr_request.field_late_permission__employee_id
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: hr_request
+#: model:mail.template,subject:hr_request.mail_template_ending_contract_notify
+msgid "Ending Contract Notification"
+msgstr "إشعار إنهاء العقد"
+
+#. module: hr_request
+#: model:ir.model.fields,field_description:hr_request.field_disclaimer_request__message_follower_ids
+#: model:ir.model.fields,field_description:hr_request.field_late_permission__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: hr_request
+#: model:ir.model.fields,field_description:hr_request.field_disclaimer_request__message_channel_ids
+#: model:ir.model.fields,field_description:hr_request.field_late_permission__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: hr_request
+#: model:ir.model.fields,field_description:hr_request.field_disclaimer_request__message_partner_ids
+#: model:ir.model.fields,field_description:hr_request.field_late_permission__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: hr_request
+#: model:ir.module.category,name:hr_request.module_category_general_secretariat
+msgid "General Secretariat"
+msgstr "الأمانة العامة"
+
+#. module: hr_request
+#: model:res.groups,name:hr_request.group_general_secretary_manager
+msgid "General Secretary"
+msgstr "الأمين العام"
+
+#. module: hr_request
+#: model:ir.ui.menu,name:hr_request.hr_root_menu
+msgid "HR"
+msgstr "الموارد البشرية"
+
+#. module: hr_request
+#: selection:disclaimer.request,state:0
+#: selection:late.permission,state:0
+msgid "HR MANAGER"
+msgstr "مدير الموارد البشرية"
+
+#. module: hr_request
+#: selection:disclaimer.request,state:0
+msgid "HR OFFICER"
+msgstr "مشرف الموارد البشرية"
+
+#. module: hr_request
+#: model:ir.actions.act_window,name:hr_request.action_hr_config_settings
+#: model_terms:ir.ui.view,arch_db:hr_request.res_config_settings_view_form
+msgid "HR Settings"
+msgstr "إعدادات الموارد البشرية"
+
+#. module: hr_request
+#: model:res.groups,name:hr_request.group_it_head_office
+msgid "Head Office"
+msgstr "مدير القسم"
+
+#. module: hr_request
+#: model:ir.model.fields,field_description:hr_request.field_disclaimer_request__id
+#: model:ir.model.fields,field_description:hr_request.field_late_permission__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: hr_request
+#: model:res.groups,name:hr_request.group_it_employee
+msgid "IT Employee"
+msgstr "موظف تقنية"
+
+#. module: hr_request
+#: selection:disclaimer.request,state:0
+msgid "IT MANAGER"
+msgstr "مدير التقنية"
+
+#. module: hr_request
+#: model:ir.model.fields,help:hr_request.field_disclaimer_request__message_unread
+#: model:ir.model.fields,help:hr_request.field_late_permission__message_unread
+msgid "If checked new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: hr_request
+#: model:ir.model.fields,help:hr_request.field_disclaimer_request__message_needaction
+#: model:ir.model.fields,help:hr_request.field_late_permission__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: hr_request
+#: model:ir.model.fields,help:hr_request.field_disclaimer_request__message_has_error
+#: model:ir.model.fields,help:hr_request.field_late_permission__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا كان محددًا، فقد حدث خطأ في تسليم بعض الرسائل."
+
+#. module: hr_request
+#: model:ir.model.fields,field_description:hr_request.field_disclaimer_request__message_is_follower
+#: model:ir.model.fields,field_description:hr_request.field_late_permission__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: hr_request
+#: model:ir.model.fields,field_description:hr_request.field_disclaimer_request____last_update
+#: model:ir.model.fields,field_description:hr_request.field_late_permission____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_request
+#: model:ir.model.fields,field_description:hr_request.field_disclaimer_request__write_uid
+#: model:ir.model.fields,field_description:hr_request.field_late_permission__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: hr_request
+#: model:ir.model.fields,field_description:hr_request.field_disclaimer_request__write_date
+#: model:ir.model.fields,field_description:hr_request.field_late_permission__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: hr_request
+#: model:ir.actions.act_window,name:hr_request.action_late_permission
+#: model:ir.ui.menu,name:hr_request.late_permission_menu
+#: model_terms:ir.ui.view,arch_db:hr_request.late_permission_form
+#: model_terms:ir.ui.view,arch_db:hr_request.late_permission_tree
+msgid "Late Permission"
+msgstr "طلب الإستئان"
+
+#. module: hr_request
+#: model_terms:ir.ui.view,arch_db:hr_request.res_config_settings_view_form
+msgid "Late Permission Settings"
+msgstr "إعدادات طلب الإستئان"
+
+#. module: hr_request
+#: selection:late.permission,type:0
+msgid "Late Sign in"
+msgstr "تسجيل الدخول المتأخر"
+
+#. module: hr_request
+#: model:ir.model.fields,field_description:hr_request.field_hr_contract__link
+msgid "Link"
+msgstr "لينك"
+
+#. module: hr_request
+#: model:ir.model.fields,field_description:hr_request.field_disclaimer_request__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_request.field_late_permission__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: hr_request
+#: model:ir.model.fields,field_description:hr_request.field_disclaimer_request__message_has_error
+#: model:ir.model.fields,field_description:hr_request.field_late_permission__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: hr_request
+#: model:ir.model.fields,field_description:hr_request.field_disclaimer_request__message_ids
+#: model:ir.model.fields,field_description:hr_request.field_late_permission__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: hr_request
+#: model:ir.model.fields,field_description:hr_request.field_disclaimer_request__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: hr_request
+#: model:ir.model.fields,field_description:hr_request.field_disclaimer_request__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_request.field_late_permission__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: hr_request
+#: model:ir.model.fields,field_description:hr_request.field_disclaimer_request__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_request.field_late_permission__message_has_error_counter
+msgid "Number of error"
+msgstr "عدد الأخطاء"
+
+#. module: hr_request
+#: model:ir.model.fields,help:hr_request.field_disclaimer_request__message_needaction_counter
+#: model:ir.model.fields,help:hr_request.field_late_permission__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: hr_request
+#: model:ir.model.fields,help:hr_request.field_disclaimer_request__message_has_error_counter
+#: model:ir.model.fields,help:hr_request.field_late_permission__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل الحادث بها خطأ في التسليم"
+
+#. module: hr_request
+#: model:ir.model.fields,help:hr_request.field_disclaimer_request__message_unread_counter
+#: model:ir.model.fields,help:hr_request.field_late_permission__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: hr_request
+#: model:ir.model.fields,field_description:hr_request.field_late_permission__permission_time
+msgid "Permission Time"
+msgstr "توقيت الإستئذان"
+
+#. module: hr_request
+#: model:ir.model.fields,field_description:hr_request.field_late_permission__type
+msgid "Permission Type"
+msgstr "نوع الإستئذان"
+
+#. module: hr_request
+#: model:ir.ui.menu,name:hr_request.hr_request_personal_menu
+msgid "Personal Request"
+msgstr "طبات شخصية"
+
+#. module: hr_request
+#: model:ir.model.fields,field_description:hr_request.field_hr_contract__pre_1mon_date
+msgid "Pre 1Mon Date"
+msgstr "كل شهر"
+
+#. module: hr_request
+#: model:ir.model.fields,field_description:hr_request.field_hr_contract__pre_2mon_date
+msgid "Pre 2Mon Date"
+msgstr "كل شهرين"
+
+#. module: hr_request
+#: model:ir.model.fields,field_description:hr_request.field_res_config_settings__num_months
+#: model_terms:ir.ui.view,arch_db:hr_request.res_config_settings_view_form
+msgid "Pre Ending Date Months To Notify"
+msgstr "إخطار ماقبل أنتهاء الاشهر"
+
+#. module: hr_request
+#: model:ir.model.fields,field_description:hr_request.field_res_config_settings__trial_num_months
+#: model_terms:ir.ui.view,arch_db:hr_request.res_config_settings_view_form
+msgid "Pre Trial Ending Date Months To Notify"
+msgstr "إخطار ماقبل أنتهاء اشهر الفتره التجريبة"
+
+#. module: hr_request
+#: selection:disclaimer.request,state:0
+#: selection:late.permission,state:0
+msgid "REJECTED"
+msgstr "مرفوض"
+
+#. module: hr_request
+#: model_terms:ir.ui.view,arch_db:hr_request.disclaimer_request_form
+#: model_terms:ir.ui.view,arch_db:hr_request.late_permission_form
+msgid "Reject"
+msgstr "رفض"
+
+#. module: hr_request
+#: model:ir.model.fields,help:hr_request.field_disclaimer_request__department_manager
+#: model:ir.model.fields,help:hr_request.field_disclaimer_request__direct_manager
+#: model:ir.model.fields,help:hr_request.field_late_permission__direct_manager
+msgid "Related user name for the resource to manage its access."
+msgstr "اسم المستخدم ذو الصلة للمورد لإدارة وصوله."
+
+#. module: hr_request
+#: model_terms:ir.ui.view,arch_db:hr_request.disclaimer_request_form
+#: model_terms:ir.ui.view,arch_db:hr_request.late_permission_form
+msgid "Send"
+msgstr "إرسال"
+
+#. module: hr_request
+#: model_terms:ir.ui.view,arch_db:hr_request.res_config_settings_view_form
+msgid "Set Number of months to be notified before employee contract ending date"
+msgstr "حدد عدد الأشهر التي سيتم إعلامك بها قبل تاريخ انتهاء عقد الموظف"
+
+#. module: hr_request
+#: model_terms:ir.ui.view,arch_db:hr_request.res_config_settings_view_form
+msgid "Set Number of months to be notified before employee contract trial ending date"
+msgstr "حدد عدد الأشهر التي سيتم إعلامك بها قبل تاريخ انتهاء تجربة عقد الموظف"
+
+#. module: hr_request
+#: model:ir.ui.menu,name:hr_request.late_permission_setting_menu
+msgid "Settings"
+msgstr "الإعدادات"
+
+#. module: hr_request
+#: model:ir.model.fields,field_description:hr_request.field_disclaimer_request__state
+#: model:ir.model.fields,field_description:hr_request.field_late_permission__state
+msgid "Status"
+msgstr "الحالة"
+
+#. module: hr_request
+#: model:ir.module.category,name:hr_request.module_category_it_dept
+msgid "Technical Department"
+msgstr "القسم التقني"
+
+#. module: hr_request
+#: model:mail.template,subject:hr_request.mail_template_trail_ending_contract_notify
+msgid "Trail Ending Contract Notification"
+msgstr "إشعار إنهاء العقد"
+
+#. module: hr_request
+#: model:ir.model.fields,field_description:hr_request.field_disclaimer_request__message_unread
+#: model:ir.model.fields,field_description:hr_request.field_late_permission__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل الجديدة"
+
+#. module: hr_request
+#: model:ir.model.fields,field_description:hr_request.field_disclaimer_request__message_unread_counter
+#: model:ir.model.fields,field_description:hr_request.field_late_permission__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: hr_request
+#: code:addons/hr_request/models/disclaimer.py:49
+#: code:addons/hr_request/models/disclaimer.py:60
+#: code:addons/hr_request/models/disclaimer.py:71
+#: code:addons/hr_request/models/disclaimer.py:81
+#: code:addons/hr_request/models/disclaimer.py:91
+#: code:addons/hr_request/models/disclaimer.py:101
+#: code:addons/hr_request/models/late_permission.py:105
+#: code:addons/hr_request/models/late_permission.py:114
+#, python-format
+msgid "You Cant Approve This Request"
+msgstr "عفوآ. لا تستطيع رفض هذا الطلب"
+
+#. module: hr_request
+#: code:addons/hr_request/models/disclaimer.py:111
+#: code:addons/hr_request/models/disclaimer.py:119
+#: code:addons/hr_request/models/disclaimer.py:127
+#: code:addons/hr_request/models/disclaimer.py:134
+#: code:addons/hr_request/models/disclaimer.py:141
+#: code:addons/hr_request/models/disclaimer.py:148
+#: code:addons/hr_request/models/late_permission.py:125
+#: code:addons/hr_request/models/late_permission.py:131
+#, python-format
+msgid "You Cant Reject This Request"
+msgstr "عفوآ. لا تستطيع رفض هذا الطلب"
+
+#. module: hr_request
+#: model:ir.model,name:hr_request.model_disclaimer_request
+msgid "disclaimer.request"
+msgstr ""
+
+#. module: hr_request
+#: model:ir.model,name:hr_request.model_late_permission
+msgid "late.permission"
+msgstr ""
+
+#. module: hr_request
+#: model:mail.template,subject:hr_request.mail_template_disclaimer_request
+msgid "request : Disclaimer Request"
+msgstr "طلب : إخلاء طرف"
+
+#. module: hr_request
+#: model:mail.template,subject:hr_request.mail_template_late_permission
+msgid "request : Late Permission"
+msgstr "طلب : إستئذان"
+
+#. module: hr_request
+#: code:addons/hr_request/models/late_permission.py:69
+#, python-format
+msgid "you cant create Early Sign out before 01.30 pm ..!"
+msgstr "لا يمكنك إنشاء تسجيل الخروج المبكر قبل الساعة 01:30 مساءً ..!"
+
+#. module: hr_request
+#: code:addons/hr_request/models/late_permission.py:92
+#, python-format
+msgid "you have already take this option Two times before this month ..!"
+msgstr "كنت قد اتخذت هذا الخيار بالفعل مرتين قبل هذا الشهر ..!"
+

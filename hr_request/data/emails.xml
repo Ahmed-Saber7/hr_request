@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--creating email template for Late Permission Request-->
+        <record id="mail_template_late_permission" model="mail.template">
+            <field name="name">request : Late Permission</field>
+            <field name="email_from">odoo-notifications@csc.org.sa</field>
+            <field name="email_to">odoo-notifications@csc.org.sa</field>
+            <field name="subject">request : Late Permission</field>
+            <field name="model_id" ref="hr_request.model_late_permission"/>
+            <field name="auto_delete" eval="False"/>
+            <field name="built_in" eval="True"/>
+            <field name="body_html">
+                <![CDATA[
+            <div style="margin: 10px auto;direction:rtl;">
+            <div>
+            </div>
+                <p> احمد صابر السيد محمود</p>
+            </div>
+            ]]>
+            </field>
+        </record>
+
+        <!--creating email template for Disclaimer Request-->
+        <record id="mail_template_disclaimer_request" model="mail.template">
+            <field name="name">request : Disclaimer Request</field>
+            <field name="email_from">odoo-notifications@csc.org.sa</field>
+            <field name="email_to">odoo-notifications@csc.org.sa</field>
+            <field name="subject">request : Disclaimer Request</field>
+            <field name="model_id" ref="hr_request.model_disclaimer_request"/>
+            <field name="auto_delete" eval="False"/>
+            <field name="built_in" eval="True"/>
+            <field name="body_html">
+                <![CDATA[
+            <div style="margin: 10px auto;direction:rtl;">
+            <div>
+            </div>
+                <p> احمد صابر السيد محمود</p>
+            </div>
+            ]]>
+            </field>
+        </record>
+
+
+        <record id="mail_template_ending_contract_notify" model="mail.template">
+            <field name="name">request : Ending Contract Notification</field>
+            <field name="email_from">odoo-notifications@csc.org.sa</field>
+            <field name="email_to">odoo-notifications@csc.org.sa</field>
+            <field name="subject">Ending Contract Notification</field>
+            <field name="model_id" ref="hr_request.model_hr_contract"/>
+            <field name="auto_delete" eval="False"/>
+            <field name="built_in" eval="True"/>
+            <field name="body_html">
+                <![CDATA[
+            <div style="margin: 10px auto;direction:rtl;">
+            <div>
+            </div>
+            <p> MR/ ${object.employee_id.d_manager.name} </p>
+            <p>
+            Please renew contract for employee <a href="${object.employee_id.name}"/>
+            <a href="${object.link}">From Here</a>
+            </p>
+            </div>
+            ]]>
+            </field>
+        </record>
+        <record id="mail_template_trail_ending_contract_notify" model="mail.template">
+            <field name="name">request : Trail Ending Contract Notification</field>
+            <field name="email_from">odoo-notifications@csc.org.sa</field>
+            <field name="email_to">odoo-notifications@csc.org.sa</field>
+            <field name="subject">Trail Ending Contract Notification</field>
+            <field name="model_id" ref="hr_request.model_hr_contract"/>
+            <field name="auto_delete" eval="False"/>
+            <field name="built_in" eval="True"/>
+            <field name="body_html">
+                <![CDATA[
+            <div style="margin: 10px auto;direction:rtl;">
+            <div>
+            </div>
+            <p> MR/ ${object.employee_id.d_manager.name} </p>
+            <p>
+            Please renew contract for employee <a href="${object.employee_id.name}"/>
+            <a href="${object.link}">From Here</a>
+            </p>
+            </div>
+            ]]>
+            </field>
+        </record>
+
+    </data>
+</odoo>

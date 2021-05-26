@@ -1,0 +1,109 @@
+<odoo>
+    <data>
+        <!--form of the Disclaimer Request menu-->
+        <record id="disclaimer_request_form" model="ir.ui.view">
+            <field name="name">disclaimer.request.form</field>
+            <field name="model">disclaimer.request</field>
+            <field name="arch" type="xml">
+                <form string="Disclaimer Request">
+                    <header>
+                        <button name="hr_officer_confirm" type="object" string="Send" states="hr_officer"
+                                attrs="{'invisible': [('state', '!=', ['hr_officer'])]}"
+                                groups="hr.group_hr_user"
+                                class="oe_highlight"/>
+
+                        <button name="direct_manager_confirm" type="object" string="Approve" states="direct_manager"
+                                class="oe_highlight"/>
+
+                        <button name="department_manager_confirm" type="object" string="Approve"
+                                states="department_manager"
+                                class="oe_highlight" attrs="{'invisible': [('state', '!=', ['hr_manager'])]}"/>
+
+
+                        <button name="it_manager_confirm" type="object" string="Approve" states="it_manager"
+                                attrs="{'invisible': [('state', '!=', ['it_manager'])]}"
+                                groups="hr_request.group_it_dept_manager"
+                                class="oe_highlight"/>
+
+                        <button name="administrative_manager_confirm" type="object" string="Approve"
+                                states="administrative_manager"
+                                attrs="{'invisible': [('state', '!=', ['administrative_manager'])]}"
+                                groups="hr_request.group_administrative_manager"
+                                class="oe_highlight"/>
+
+                        <button name="hr_manager_confirm" type="object" string="Approve" states="hr_manager"
+                                groups="hr.group_hr_manager"
+                                class="oe_highlight" attrs="{'invisible': [('state', '!=', ['hr_manager'])]}"/>
+
+                        <button name="reject" type="object" string="Reject"
+                                class="oe_highlight"
+                                attrs="{'invisible': [('state', 'in', ['hr_officer','approved','rejected'])]}"/>
+
+                        <field name="state" widget="statusbar"/>
+                    </header>
+
+                    <sheet>
+                        <div class="oe_edit_only">
+                            <label for="name" class="oe_inline"/>
+                        </div>
+                        <h1>
+                            <field name="name" class="oe_inline"/>
+                        </h1>
+                        <group>
+                            <group>
+                                <field name="employee_id"/>
+                                <field name="date"/>
+                            </group>
+                            <group>
+                                <field name="description"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+
+                </form>
+            </field>
+        </record>
+
+        <!--tree of the Disclaimer Request menu-->
+        <record id="disclaimer_request_tree" model="ir.ui.view">
+            <field name="name">disclaimer.request.tree</field>
+            <field name="model">disclaimer.request</field>
+            <field name="arch" type="xml">
+                <tree string="Disclaimer Request" default_order='create_date desc'
+                      decoration-danger="state == 'rejected'"
+                      decoration-success="state == 'approved'"
+                      decoration-info="state == 'hr_officer'">
+                    <field name="name"/>
+                    <field name="employee_id"/>
+                    <field name="date"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--action of the Late Permission menu-->
+        <record id="action_disclaimer_request" model="ir.actions.act_window">
+            <field name="name">Disclaimer Request</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">disclaimer.request</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create your Disclaimer Request !
+                </p>
+            </field>
+
+        </record>
+
+        <!--creating menus-->
+        <menuitem id="disclaimer_request_menu" name="Disclaimer Request" parent="hr_request_administrative_menu"
+                  action="action_disclaimer_request" sequence="2"/>
+
+
+    </data>
+</odoo>
